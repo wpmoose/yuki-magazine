@@ -23,7 +23,9 @@ jobs:
       - name: Pack release
         run: |
           sudo zip -r yuki-magazine.zip . -x "style-premium.css"
-          sudo zip -r yuki-magazine-premium.zip . -x "style.css"
+          sudo rm -rf ./style.css
+          sudo mv ./style-premium.css ./style.css
+          sudo zip -r yuki-magazine-premium.zip . -x "style.css" -x "yuki-magazine.zip"
 
       - name: Delete Old Release
         id: delete_release
