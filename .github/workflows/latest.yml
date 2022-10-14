@@ -2,7 +2,7 @@ name: Latest
 
 on:
   push:
-    branches: [ next ]
+    branches: [ latest ]
 
 jobs:
 
