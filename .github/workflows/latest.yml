@@ -20,6 +20,22 @@ jobs:
         id: version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          extensions: zip
+
+      - name: Install wp-cli
+        run: |
+          curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          chmod +x wp-cli.phar
+          sudo mv wp-cli.phar /usr/local/bin/wp-cli
+
+      - name: Make Pot file
+        run: |
+          wp-cli i18n make-pot . ./languages/yuki-magazine.pot
+
       - name: Pack release
         run: |
           sudo zip -r yuki-magazine.zip . -x "style-premium.css"
