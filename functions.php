@@ -1,4 +1,9 @@
 <?php
+/**
+ * Theme bootstrap
+ *
+ * @package Yuki Magazine
+ */
 
 if ( ! function_exists( 'yuki_magazine_light_color_scheme' ) ) {
 	/**
@@ -349,5 +354,3 @@ if ( ! function_exists( 'yuki_magazine_featured_image_background_overlay' ) ) {
 	}
 }
 add_filter( 'yuki_post_featured_image_background_overlay_default_value', 'yuki_magazine_featured_image_background_overlay' );
-
-//delete_option( 'yuki_homepage_builder' );
