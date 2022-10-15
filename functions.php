@@ -339,4 +339,15 @@ if ( ! function_exists( 'yuki_magazine_post_featured_image_fallback' ) ) {
 }
 add_filter( 'yuki_post_featured_image_fallback_default_value', 'yuki_magazine_post_featured_image_fallback' );
 
+if ( ! function_exists( 'yuki_magazine_featured_image_background_overlay' ) ) {
+	function yuki_magazine_featured_image_background_overlay() {
+		return [
+			'type'     => 'gradient',
+			'gradient' => 'linear-gradient(180deg,rgba(24,24,27,0.26) 0%,rgba(24,24,27,0.73) 100%)',
+			'color'    => 'var(--yuki-accent-active)',
+		];
+	}
+}
+add_filter( 'yuki_post_featured_image_background_overlay_default_value', 'yuki_magazine_featured_image_background_overlay' );
+
 //delete_option( 'yuki_homepage_builder' );
