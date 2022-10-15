@@ -23,6 +23,10 @@ More details [here](http://www.gnu.org/licenses/gpl-2.0.html).
 
 Image for theme screenshot
 License: CC0 1.0 Universal (CC0 1.0)
+https://pxhere.com/en/photo/846832
+https://pxhere.com/en/photo/678098
+https://pxhere.com/en/photo/1392600
+https://pxhere.com/en/photo/1209671
 
 Self Created Images
 License: CC0 1.0 Universal (CC0 1.0)
