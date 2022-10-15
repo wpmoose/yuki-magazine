@@ -60,7 +60,7 @@ if ( ! function_exists( 'yuki_magazine_homepage_content_spacing' ) ) {
 		return '24px';
 	}
 }
-add_filter( 'yuki_homepage_default_content_spacing', 'yuki_magazine_homepage_content_spacing' );
+add_filter( 'yuki_homepage_content_spacing_default_value', 'yuki_magazine_homepage_content_spacing' );
 
 if ( ! function_exists( 'yuki_magazine_homepage_heading' ) ) {
 	/**
@@ -323,6 +323,20 @@ if ( ! function_exists( 'yuki_magazine_homepage_design' ) ) {
 		];
 	}
 }
-add_filter( 'yuki_homepage_default_design', 'yuki_magazine_homepage_design' );
+add_filter( 'yuki_homepage_builder_default_value', 'yuki_magazine_homepage_design' );
+
+if ( ! function_exists( 'yuki_magazine_post_featured_image_fallback' ) ) {
+	/**
+	 * Set default post featured image
+	 *
+	 * @return string[]
+	 */
+	function yuki_magazine_post_featured_image_fallback() {
+		return [
+			'url' => get_stylesheet_directory_uri() . '/assets/featured-image.jpg',
+		];
+	}
+}
+add_filter( 'yuki_post_featured_image_fallback_default_value', 'yuki_magazine_post_featured_image_fallback' );
 
 //delete_option( 'yuki_homepage_builder' );
