@@ -1,8 +1,8 @@
-name: Latest
+name: Beta
 
 on:
   push:
-    branches: [ latest ]
+    branches: [ beta ]
 
 jobs:
 
